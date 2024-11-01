@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sonic Pi\n"
-"PO-Revision-Date: 2024-10-20 19:18+0000\n"
-"Last-Translator: Karl Below <karl.below@gmail.com>\n"
+"PO-Revision-Date: 2024-11-02 16:00+0000\n"
+"Last-Translator: no <reif.m@protonmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/sonic-pi/tutorial/"
 "de/>\n"
 "Language: de\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-rc\n"
+"X-Generator: Weblate 5.8.2\n"
 
 #: 01-Welcome-to-Sonic-Pi.md:1
 msgid "1 Welcome to Sonic Pi"
@@ -34,7 +34,7 @@ msgstr ""
 "lernen, wie man mit Sonic Pi verrückte Klänge machen kann, wie ich gespannt "
 "darauf bin es dir zu zeigen. Es wird eine wirklich *unterhaltsame* Reise "
 "werden, bei der du alles über Musik, Synthese, Programmieren, Komposition, "
-"Aufführung (Performance) lernen wirst - und mehr."
+"Auftritte (Performance) etc. lernen wirst."
 
 #: 01-Welcome-to-Sonic-Pi.md:10
 msgid ""
