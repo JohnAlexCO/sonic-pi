@@ -47,7 +47,7 @@ and to run
 In order to build Sonic Pi's various components, we need to install a
 few dependencies:
 
-* Build Tools (c++ compiler, cmake, git.)
+* Build Tools (c++ compiler, cmake, git)
 * Qt + Dev tools (6+)
 * Pipewire
 * Ruby + Dev tools (2.5+)
@@ -60,19 +60,15 @@ Note: please make sure that you have gcc12 installed. Compiling vcpkg dependenci
 ### 1.1 Debian
 The following is a rough list of Debian packages that are needed that can serve as a starting position:
 ```bash
-sudo apt-get install -y build-essential git libssl-dev ruby-dev elixir erlang-dev erlang-xmerl qt6-tools-dev qt6-tools-dev-tools libqt6svg6-dev libqt6opengl6-dev supercollider-server sc3-plugins-server alsa-utils  libasound2-dev cmake ninja-build pipewire-jack libspa-0.2-jack qt6-wayland libwayland-dev libxkbcommon-dev libegl1-mesa-dev libx11-dev libxft-dev libxext-dev qpwgraph compton
+sudo apt-get install -y build-essential git libssl-dev ruby-dev elixir erlang-dev erlang-xmerl qt5-qmake qt6-tools-dev qt6-tools-dev-tools libqt6svg6-dev libqt6opengl6-dev supercollider-server sc3-plugins-server alsa-utils  libasound2-dev cmake ninja-build pipewire-jack libspa-0.2-jack qt6-wayland libwayland-dev libxkbcommon-dev libegl1-mesa-dev libx11-dev libxft-dev libxext-dev qpwgraph compton
 ```
 
-*Notes:*
+> [!IMPORTANT]
+> Check the versions of Qt and elixir with `qmake --version && elixir --version`
+> If the Qt or Elixir versions are too old (see dependency list above) you should update them before proceeding
 
-1. Check the version of `Qt` after package installation.
-
-* Check your current Qt version with `qmake --version`.
-*  If it is too old (see dependency list above) you should find a way to update `Qt` before going to the build step.
-
-3. The main repositories may not have a recent enough version of
-Elixir. If this is the case, you can install it via **one** of the
-following methods:
+If the main repositories do not have a recent enough version of
+Elixir, you can install it via **one** of the following methods:
 
 * Run `app/pi-install-elixir.sh` to install it using [ASDF](https://github.com/asdf-vm/asdf)
 * Get newer packaged versions of Elixir from [Erlang Solutions' repository](https://www.erlang-solutions.com/downloads/) (though installing packages from outside your distros main repository is at your own risk!)
@@ -133,6 +129,9 @@ Next we run the build-all script for Linux:
 ./linux-build-all.sh
 ```
 
+> [!NOTE]
+> Some additional dependencies, such as `libwayland-dev`,
+> `libx11-dev`, and `ninja` may also be installed by this script 
 
 ## 4. Start Sonic Pi
 
@@ -153,7 +152,8 @@ https://in-thread.sonic-pi.net
 
 #### Anaconda users beware!
 
-Anaconda (a popular data science toolkit) installs a lot of extra programs, which conflicts with the build process mentioned above.
+> [!WARNING] 
+> Anaconda (a popular data science toolkit) installs a lot of extra programs, which conflicts with the build process mentioned above.
 
 If you run:
 
